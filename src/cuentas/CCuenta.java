@@ -1,7 +1,13 @@
 package cuentas;
 
-public class CCuenta {
+/**
+*
+* @author David cabrerizo
+* version 1.0 29_abril_2022
+*/
 
+public class CCuenta {
+    /** comenzamos comentando  los Getters y Setters de las variables*/
     /**
      * @return the nombre
      */
@@ -79,6 +85,13 @@ public class CCuenta {
     {
         return getSaldo();
     }
+    
+
+   /**
+    * Este método recibe una cantidad por parámetro y es sumada al saldo
+    * @param cantidad es la cantidad a ingresar que introduce el usuario
+    * @throws Exception cuando la cantidad es negativa 
+   */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -86,6 +99,13 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");
         setSaldo(getSaldo() + cantidad);
     }
+    
+    /**
+    * Este método recibe una cantidad por parámetro y la resta al saldo
+    * @param cantidad es la cantidad a restar introducida por el usuario
+    * @throws Exception cuando la cantidad es negativa
+    * @throws Exception cuando la cantidad es mayor que el saldo
+    */
 
     public void retirar(double cantidad) throws Exception
     {
